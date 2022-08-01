@@ -157,12 +157,12 @@ svg#rocket-smoke {
 a,
 a:visited,
 a:hover {
-  color: #00aea4;
+  color: #24292e;
   text-decoration: none;
 }
 
 a:hover {
-  color: #00aea4;
+  color: #24292e;
 }
 
 .terminal {
@@ -323,7 +323,7 @@ p {
 a,
 a:hover,
 a:focus {
-  color: inherit;
+  color: black;
   text-decoration: none;
   transition: all 0.3s;
 }
@@ -399,6 +399,7 @@ a:focus {
   opacity: 1;
 }
 #sidebar .sidebar-header {
+  cursor: pointer;
   padding: 20px;
   color: black;
   background: #fff;
@@ -529,4 +530,22 @@ a.article:hover {
 
   .sizeField {
     width: 400px;
+  }
+
+  .colorButton {
+    color: white;
+    background-color: #f26c48;
+  }
+
+  .positionButton {
+    margin-top: 600px;
+  }
+
+  .textSave {
+    text-decoration: underline;
+    align-items: center;
+  }
+
+  .moveTextSave {
+    padding-left: 110px;
   }
