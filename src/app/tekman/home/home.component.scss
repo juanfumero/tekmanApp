@@ -1,4 +1,5 @@
 .tamanoTarjeta {
+  margin-top: 100px;
   width: 800px;
 }
 
@@ -8,6 +9,19 @@
 }
 
 .tamanoTemario {
+  cursor: pointer;
   width: 200px;
   margin-right: 20px;
 }
+
+.colorButton {
+  color: white;
+  background-color: #f26c48;
+}
+
+.colorButtonSecondary {
+  color: white;
+  background-color: #f26c48;
+  margin-left: 20px;
+}
+
