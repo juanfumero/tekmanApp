@@ -47,7 +47,6 @@ export class DetailCardComponent implements OnInit {
         console.log('imprimo mi item', item);
         this.myCard = item.find((x:any) => (x.id === Number(this.idCard)));
         console.log('imprimo myCard', this.myCard);
-        return;
       });
     });
   }
