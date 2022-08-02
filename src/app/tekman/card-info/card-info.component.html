@@ -2,11 +2,11 @@
 <div class="card selectorCard" (click)="detailTemario()">
   <div style="display: flex;">
     <div class="card-body">
-      <h1 class="card-title"><strong>1º Trimestre</strong></h1>
-      <p class="card-text">50/50</p>
+      <h1 class="card-title"><strong>{{cardItem?.title}}</strong></h1>
+      <p class="card-text">{{cardItem?.value}}/{{cardItem?.totalValue}}</p>
     </div>
     <div style="padding-top: 25px; padding-right: 30px;">
-      <canvas *ngIf="true"
+      <canvas *ngIf="!isComplete"
       class="circuleSize"
       baseChart
       [type]="'pie'"
@@ -17,33 +17,9 @@
       [legend]="false"
       >
       </canvas>
-      <img  *ngIf="false" src="../../../assets/img/tekmanComplete.png" class="circuleCompleteSize">
+      <img  *ngIf="isComplete" src="../../../assets/img/tekmanComplete.png" class="circuleCompleteSize">
     </div>
 
   </div>
 
 </div>
-
-
-<!--<mat-card class="tamanoTemario" (click)="detailTemario()" >
-  <mat-card-header>
-    <mat-card-title>1º Trimestre</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <p>
-    50/50
-    </p>
-    <canvas
-    class="circuleSize"
-baseChart
-[type]="'pie'"
-[datasets]="pieChartDatasets"
-[labels]=""
-[options]="pieChartOptions"
-[plugins]="pieChartPlugins"
-[legend]="false"
->
-</canvas>
-<img src="../../../assets/img/tekmanComplete.png" class="circuleCompleteSize">
-  </mat-card-content>
-</mat-card> -->

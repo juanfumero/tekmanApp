@@ -11,6 +11,7 @@ import { DialogInstructionsComponent } from './dialog-instructions/dialog-instru
 import {MatDialogModule} from '@angular/material/dialog';
 import { NgChartsModule } from 'ng2-charts';
 import { CardInfoComponent } from './card-info/card-info.component';
+import { CardService } from './services/card.service';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -27,6 +28,9 @@ import { CardInfoComponent } from './card-info/card-info.component';
     MatIconModule,
     MatDialogModule,
     NgChartsModule
+  ],
+  providers: [
+    CardService
   ]
 })
 export class TekmanModule { }

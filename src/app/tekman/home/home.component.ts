@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ChartOptions } from 'chart.js';
+import { CardService } from '../services/card.service';
 
 
 @Component({
@@ -11,6 +12,7 @@ import { ChartOptions } from 'chart.js';
 export class HomeComponent implements OnInit {
 
   title = 'ng2-charts-demo';
+  listCard = [];
 
   // Pie
   public pieChartOptions: ChartOptions<'pie'> = {
@@ -38,13 +40,17 @@ export class HomeComponent implements OnInit {
   public pieChartLegend = false;
   public pieChartPlugins = [];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private cardService: CardService) { }
 
   ngOnInit(): void {
+    this.cardService.getListCardInfo().subscribe(item => {
+      this.listCard = item;
+    });
   }
 
   detailTemario(event:any) {
-    this.router.navigate(['/detailCard']);
+    console.log('imprimo mi event', event);
+    this.router.navigate(['detailCard',event.id]);
   }
 
 }

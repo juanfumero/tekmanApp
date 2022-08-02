@@ -14,7 +14,7 @@ const adminRoutes: Routes = [
 
     },
     {
-      path: 'detailCard',
+      path: 'detailCard/:id',
       component: DetailCardComponent,
     }
   ];

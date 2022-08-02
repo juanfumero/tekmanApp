@@ -1,0 +1,45 @@
+{
+  "cardinfo": [{
+  "id": 1,
+  "title": "1º Trimestre",
+  "value": 20,
+  "totalValue": 50
+}, {
+  "id": 2,
+  "title": "2º Trimestre",
+  "releaseDate": "September 14, 2016",
+  "value": 30,
+  "totalValue": 50
+}, {
+  "id": 3,
+  "title": "3º Trimestre",
+  "releaseDate": "March 23, 2017",
+  "value": 40,
+  "totalValue": 50
+}, {
+  "id": 4,
+  "title": "4º Trimestre",
+  "releaseDate": "November 1, 2017",
+  "value": 50,
+  "totalValue": 50
+}, {
+  "id": 5,
+  "title": "5º Trimestre",
+  "releaseDate": "May 4th, 2018",
+  "value": 20,
+  "totalValue": 50
+}, {
+  "id": 6,
+  "title": "6º Trimestre",
+  "releaseDate": "October 18, 2018",
+  "value": 50,
+  "totalValue": 50
+}, {
+  "id": 7,
+  "title": "7º Trimestre",
+  "releaseDate": "May 28, 2019",
+  "value": 10,
+  "totalValue": 50
+}]
+}
+

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Router } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { DialogInstructionsComponent } from '../dialog-instructions/dialog-instructions.component';
+import { CardService } from '../services/card.service';
 
 
 export interface PeriodicElement {
@@ -33,10 +34,22 @@ export class DetailCardComponent implements OnInit {
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
   clickedRows = new Set<PeriodicElement>();
+  idCard: any;
+  myCard: any;
 
-  constructor(private router: Router, public dialog: MatDialog) { }
+  constructor(private router: Router, public dialog: MatDialog, private rutaActiva: ActivatedRoute, private cardService: CardService) { }
 
   ngOnInit(): void {
+    this.rutaActiva.paramMap.subscribe((params: ParamMap) => {
+      this.idCard = params.get('id');
+      console.log('obtengo mi idCard', this.idCard)
+      this.cardService.getListCardInfo().subscribe(item => {
+        console.log('imprimo mi item', item);
+        this.myCard = item.find((x:any) => (x.id === Number(this.idCard)));
+        console.log('imprimo myCard', this.myCard);
+        return;
+      });
+    });
   }
 
   goToBack() {
