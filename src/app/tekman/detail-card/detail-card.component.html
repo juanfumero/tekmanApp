@@ -37,7 +37,9 @@
               {{myCard.value}}/{{myCard.totalValue}}
             </div>
           </th>
-          <td mat-cell *matCellDef="let element"> <img src="../../../assets//img/{{element.img}}"></td>
+          <td mat-cell *matCellDef="let element">
+             <img *ngIf="selectedRow" src="../../../assets//img/{{element.img}}">
+          </td>
         </ng-container>
 
 

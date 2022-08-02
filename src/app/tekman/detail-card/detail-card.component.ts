@@ -36,6 +36,7 @@ export class DetailCardComponent implements OnInit {
   idCard: any;
   myCard: any;
   isLoading: boolean = false;
+  selectedRow: boolean = true;
 
   constructor(private router: Router, public dialog: MatDialog, private rutaActiva: ActivatedRoute, private cardService: CardService) { }
 
@@ -49,6 +50,8 @@ export class DetailCardComponent implements OnInit {
         console.log('imprimo myCard', this.myCard);
       });
     });
+
+
   }
 
   goToBack() {
@@ -77,6 +80,7 @@ export class DetailCardComponent implements OnInit {
     });
 
   }
+
 
 
 
