@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
 
   title = 'ng2-charts-demo';
   listCard = [];
+  isLoading = false;
 
   // Pie
   public pieChartOptions: ChartOptions<'pie'> = {
@@ -49,8 +50,11 @@ export class HomeComponent implements OnInit {
   }
 
   detailTemario(event:any) {
-    console.log('imprimo mi event', event);
-    this.router.navigate(['detailCard',event.id]);
+    this.isLoading = true;
+    setTimeout(() => {
+      this.router.navigate(['detailCard',event.id]);
+      this.isLoading = false;
+    }, 1500);
   }
 
 }

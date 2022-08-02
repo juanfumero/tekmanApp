@@ -36,6 +36,7 @@ export class DetailCardComponent implements OnInit {
   clickedRows = new Set<PeriodicElement>();
   idCard: any;
   myCard: any;
+  isLoading: boolean = false;
 
   constructor(private router: Router, public dialog: MatDialog, private rutaActiva: ActivatedRoute, private cardService: CardService) { }
 
@@ -52,7 +53,11 @@ export class DetailCardComponent implements OnInit {
   }
 
   goToBack() {
-    this.router.navigate(['/']);
+    this.isLoading = true;
+    setTimeout(() => {
+      this.router.navigate(['/']);
+      this.isLoading = false;
+    }, 1500);
   }
 
   selectedItem(row: any) {

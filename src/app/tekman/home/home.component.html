@@ -10,25 +10,31 @@
   </mat-card-actions>
 </mat-card> -->
 
-
-<div class="card tamanoTarjeta">
-  <div class="card-body">
-    <h1 class="card-title"><strong>Vuelve donde lo dejaste</strong></h1>
-    <p class="card-text">2º Trismestre - Sesión 25, Ordinales, Fracciones y Decimales</p>
-    <button mat-button class="colorButton">Reproducción ordenada</button>
-    <button mat-button class="colorButtonSecondary">Aleatorio</button>
-    <button mat-button class="colorButtonSecondary">Siguiente sesión</button>
-  </div>
+<div *ngIf="isLoading" class="centerSpinner">
+  <mat-spinner></mat-spinner>
 </div>
 
-<br>
-<h1><strong>Temario</strong></h1>
+<div *ngIf="!isLoading">
+  <div class="card tamanoTarjeta">
+    <div class="card-body">
+      <h1 class="card-title"><strong>Vuelve donde lo dejaste</strong></h1>
+      <p class="card-text">2º Trismestre - Sesión 25, Ordinales, Fracciones y Decimales</p>
+      <button mat-button class="colorButton">Reproducción ordenada</button>
+      <button mat-button class="colorButtonSecondary">Aleatorio</button>
+      <button mat-button class="colorButtonSecondary">Siguiente sesión</button>
+    </div>
+  </div>
 
-<div class="tamanoTarjetaTemario">
+  <br>
+  <h1><strong>Temario</strong></h1>
 
-  <div class="container">
-    <div class="row">
-      <app-card-info *ngFor="let item of listCard" [cardItem]="item" (myDetailClic)="detailTemario(item)"  class="col-xs-3 col-sm-3 col-md-3 moveToTop"></app-card-info>
+  <div class="tamanoTarjetaTemario">
+
+    <div class="container">
+      <div class="row">
+        <app-card-info *ngFor="let item of listCard" [cardItem]="item" (myDetailClic)="detailTemario(item)"  class="col-xs-3 col-sm-3 col-md-3 moveToTop"></app-card-info>
+      </div>
     </div>
   </div>
 </div>
+
