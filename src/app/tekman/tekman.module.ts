@@ -9,12 +9,14 @@ import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import { DialogInstructionsComponent } from './dialog-instructions/dialog-instructions.component';
 import {MatDialogModule} from '@angular/material/dialog';
-
+import { NgChartsModule } from 'ng2-charts';
+import { CardInfoComponent } from './card-info/card-info.component';
 @NgModule({
   declarations: [
     HomeComponent,
     DetailCardComponent,
-    DialogInstructionsComponent
+    DialogInstructionsComponent,
+    CardInfoComponent
   ],
   imports: [
     TekmanRoutingModule,
@@ -23,7 +25,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     CommonModule,
     MatTableModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    NgChartsModule
   ]
 })
 export class TekmanModule { }

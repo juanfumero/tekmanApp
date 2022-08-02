@@ -26,36 +26,14 @@
 
 <div class="tamanoTarjetaTemario">
 
-  <mat-card class="tamanoTemario" (click)="detailTemario()" >
-    <mat-card-header>
-      <mat-card-title>1º Trimestre</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>
-      50/50
-      </p>
-    </mat-card-content>
-  </mat-card>
-
-  <mat-card class="tamanoTemario" (click)="detailTemario()" >
-    <mat-card-header>
-      <mat-card-title>2º Trimestre</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>
-      30/50
-      </p>
-    </mat-card-content>
-  </mat-card>
-
-  <mat-card class="tamanoTemario" (click)="detailTemario()"  >
-    <mat-card-header>
-      <mat-card-title>3º Trimestre</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>
-      0/50
-      </p>
-    </mat-card-content>
-  </mat-card>
+  <div class="container">
+    <div class="row">
+      <app-card-info (myDetailClic)="detailTemario($event)"  class="col-xs-3 col-sm-3 col-md-3 moveToTop"></app-card-info>
+      <app-card-info (myDetailClic)="detailTemario($event)"  class="col-xs-3 col-sm-3 col-md-3 moveToTop"></app-card-info>
+      <app-card-info (myDetailClic)="detailTemario($event)"  class="col-xs-3 col-sm-3 col-md-3 moveToTop"></app-card-info>
+      <app-card-info (myDetailClic)="detailTemario($event)"  class="col-xs-3 col-sm-3 col-md-3 moveToTop"></app-card-info>
+      <app-card-info (myDetailClic)="detailTemario($event)"  class="col-xs-3 col-sm-3 col-md-3 moveToTop"></app-card-info>
+      <app-card-info (myDetailClic)="detailTemario($event)"  class="col-xs-3 col-sm-3 col-md-3 moveToTop"></app-card-info>
+    </div>
+  </div>
 </div>

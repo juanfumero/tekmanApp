@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ChartOptions } from 'chart.js';
 
-
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-card-info',
+  templateUrl: './card-info.component.html',
+  styleUrls: ['./card-info.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class CardInfoComponent implements OnInit {
 
+  @Input() cardItem: any;
+  @Output() myDetailClic: EventEmitter<any>;
   title = 'ng2-charts-demo';
 
   // Pie
@@ -37,14 +37,15 @@ export class HomeComponent implements OnInit {
   ];
   public pieChartLegend = false;
   public pieChartPlugins = [];
-
-  constructor(private router: Router) { }
+  constructor() {
+    this.myDetailClic = new EventEmitter<any>();
+  }
 
   ngOnInit(): void {
   }
 
-  detailTemario(event:any) {
-    this.router.navigate(['/detailCard']);
+  detailTemario() {
+    this.myDetailClic.emit();
   }
 
 }
