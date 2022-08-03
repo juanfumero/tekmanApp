@@ -1,20 +1,27 @@
-# TekmanApp
+# Project TekmanApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+- This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+- You need a version of node equal or greater than v14.15.0
+- This project shows examples of creating components, styles.
 
-you need a version of node equal or greater than v14.15.0
+## Technologies
 
-## First comand
+- Angular 14
 
-install package node_moudele: `npm i`
+## Install
 
-to run the api: `npm run api`
+- Install package node_moudele: `npm i`
+- To run the api: `npm run api` , this command run the api mock to simulate a backend service.
+- To run the app TekmanApp: `npm run start` or
+  run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Development app server
+## Start
 
-to run the app TekmanApp: `npm run start`
+- Inside the app, we can see several cards that show information about educational programs,
+  we can see that these cards are programmed according to the information that comes from the backend services.
+- You can see on the card detail screen, a table with the information of the processes of that course.
+- the app has a modal slider when you click on the configuration button.
 
-or
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
 
