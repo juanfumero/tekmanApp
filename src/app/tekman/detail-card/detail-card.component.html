@@ -1,4 +1,3 @@
-
 <div *ngIf="isLoading" class="centerSpinner">
   <mat-spinner></mat-spinner>
 </div>
@@ -6,14 +5,14 @@
 <div *ngIf="!isLoading">
   <div class="back" (click)="goToBack()">
     <mat-icon class="toparrow">keyboard_backspace</mat-icon>
-      <h1 class="moveBack">Atrás</h1>
+    <h1 class="moveBack">Atrás</h1>
   </div>
 
   <div class="containerMain">
     <div class="tamanoCard">
     </div>
 
-    <app-card-info *ngIf="myCard" [cardItem]="myCard"  class="col-xs-3 col-sm-3 col-md-3"></app-card-info>
+    <app-card-info *ngIf="myCard" [cardItem]="myCard" class="col-xs-3 col-sm-3 col-md-3"></app-card-info>
 
 
     <section class="example-container mat-elevation-z8" tabindex="0">
@@ -25,29 +24,27 @@
         </ng-container>
 
         <ng-container matColumnDef="name">
-          <th mat-header-cell *matHeaderCellDef> <h1 class="colorTitleTable">{{myCard.titleTable}}</h1>  </th>
+          <th mat-header-cell *matHeaderCellDef>
+            <h1 class="colorTitleTable">{{myCard.titleTable}}</h1>
+          </th>
           <td mat-cell *matCellDef="let element"><strong>{{element.position}}</strong> {{element.name}} </td>
         </ng-container>
 
         <ng-container matColumnDef="img">
           <th mat-header-cell *matHeaderCellDef>
-            <div class="card cardResultColor" >
+            <div class="card cardResultColor">
               {{myCard.value}}/{{myCard.totalValue}}
             </div>
           </th>
           <td mat-cell *matCellDef="let element">
-             <img *ngIf="selectedRow" src="../../../assets//img/{{element.img}}">
+            <img *ngIf="selectedRow" src="../../../assets//img/{{element.img}}">
           </td>
         </ng-container>
 
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-        <tr
-        mat-row
-        (click)="selectedItem(row)"
-        [class.demo-row-is-clicked]="clickedRows.has(row)"
-        *matRowDef="let row; columns: displayedColumns;"
-    ></tr>
+        <tr mat-row (click)="selectedItem(row)" [class.demo-row-is-clicked]="clickedRows.has(row)"
+          *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
     </section>
 
@@ -55,4 +52,3 @@
   </div>
 
 </div>
-

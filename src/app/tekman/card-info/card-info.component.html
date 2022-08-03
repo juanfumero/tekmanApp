@@ -1,4 +1,3 @@
-
 <div class="card selectorCard" (click)="detailTemario()">
   <div style="display: flex;">
     <div class="card-body">
@@ -6,18 +5,10 @@
       <p class="card-text">{{cardItem?.value}}/{{cardItem?.totalValue}}</p>
     </div>
     <div style="padding-top: 25px; padding-right: 30px;">
-      <canvas *ngIf="!isComplete"
-      class="circuleSize"
-      baseChart
-      [type]="'pie'"
-      [datasets]="pieChartDatasets"
-      [labels]=""
-      [options]="pieChartOptions"
-      [plugins]="pieChartPlugins"
-      [legend]="false"
-      >
+      <canvas *ngIf="!isComplete" class="circuleSize" baseChart [type]="'pie'" [datasets]="pieChartDatasets" [labels]=""
+        [options]="pieChartOptions" [plugins]="pieChartPlugins" [legend]="false">
       </canvas>
-      <img  *ngIf="isComplete" src="../../../assets/img/tekmanComplete.png" class="circuleCompleteSize">
+      <img *ngIf="isComplete" src="../../../assets/img/tekmanComplete.png" class="circuleCompleteSize">
     </div>
 
   </div>

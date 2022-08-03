@@ -1,17 +1,17 @@
-
 <div class="toolbar" role="banner">
   <h1 class="sizeTitle"><strong>Tarjetas</strong></h1>
 
-    <div class="spacer"></div>
-    <button mat-fab color="basic" class="iconColor" aria-label="Example icon button with a home icon">
-      <mat-icon>dialpad</mat-icon>
-    </button>
-    <button mat-fab color="basic" class="iconColor" aria-label="Example icon button with a home icon" (click)="clickEvent()">
-      <mat-icon>settings</mat-icon>
-    </button>
-    <button mat-fab color="basic" class="iconColor" aria-label="Example icon button with a home icon">
-      <mat-icon>exit_to_app</mat-icon>
-    </button>
+  <div class="spacer"></div>
+  <button mat-fab color="basic" class="iconColor" aria-label="Example icon button with a home icon">
+    <mat-icon>dialpad</mat-icon>
+  </button>
+  <button mat-fab color="basic" class="iconColor" aria-label="Example icon button with a home icon"
+    (click)="clickEvent()">
+    <mat-icon>settings</mat-icon>
+  </button>
+  <button mat-fab color="basic" class="iconColor" aria-label="Example icon button with a home icon">
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
 </div>
 
 <div class="content" role="main">
@@ -26,7 +26,7 @@
 
   </div>
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 
 
 </div>
@@ -35,37 +35,39 @@
 
 <div class="wrapper">
   <nav id="sidebar" [ngClass]="status ? 'hide' : 'show'">
-      <div class="sidebar-header" (click)="clickEvent2()">
-        <mat-icon class="toparrow">keyboard_backspace</mat-icon>
-          <h1 class="moveField">Configuración</h1>
-      </div>
-      <div class="moveField">
-        <mat-form-field class="sizeField" appearance="fill">
-          <mat-label>Idioma</mat-label>
-          <mat-select >
-            <mat-option value="ifantil1">Catalan</mat-option>
-            <mat-option value="ifantil2">Español</mat-option>
-            <mat-option value="ifantil3">Ingles</mat-option>
-          </mat-select>
-        </mat-form-field>
+    <div class="sidebar-header" (click)="clickEvent2()">
+      <mat-icon class="toparrow">keyboard_backspace</mat-icon>
+      <h1 class="moveField">Configuración</h1>
+    </div>
+    <div class="moveField">
+      <mat-form-field class="sizeField" appearance="fill">
+        <mat-label>Idioma</mat-label>
+        <mat-select>
+          <mat-option value="ifantil1">Catalan</mat-option>
+          <mat-option value="ifantil2">Español</mat-option>
+          <mat-option value="ifantil3">Ingles</mat-option>
+        </mat-select>
+      </mat-form-field>
 
-        <br>
+      <br>
 
-        <mat-form-field class="sizeField" appearance="fill">
-          <mat-label>Curso</mat-label>
-          <mat-select >
-            <mat-option value="ifantil1">3º infantil</mat-option>
-            <mat-option value="ifantil2">4º infantil</mat-option>
-            <mat-option value="ifantil3">5º infantil</mat-option>
-          </mat-select>
-        </mat-form-field>
+      <mat-form-field class="sizeField" appearance="fill">
+        <mat-label>Curso</mat-label>
+        <mat-select>
+          <mat-option value="ifantil1">3º infantil</mat-option>
+          <mat-option value="ifantil2">4º infantil</mat-option>
+          <mat-option value="ifantil3">5º infantil</mat-option>
+        </mat-select>
+      </mat-form-field>
 
 
 
       <button mat-button class="colorButton sizeField positionButton" (click)="clickEvent2()">Guardar Cambios</button>
       <br>
-      <a class="textSave" (click)="clickEvent2()"><h1 class="moveTextSave">Cerrar sin guardar</h1></a>
-      </div>
+      <a class="textSave" (click)="clickEvent2()">
+        <h1 class="moveTextSave">Cerrar sin guardar</h1>
+      </a>
+    </div>
 
 
 
@@ -74,7 +76,4 @@
 
 
 
-<div class="overlay"  [ngClass]="status ? 'active' : ''"></div>
-
-
-
+<div class="overlay" [ngClass]="status ? 'active' : ''"></div>

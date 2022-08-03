@@ -49,10 +49,10 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  detailTemario(event:any) {
+  detailTemario(event: any) {
     this.isLoading = true;
     setTimeout(() => {
-      this.router.navigate(['detailCard',event.id]);
+      this.router.navigate(['detailCard', event.id]);
       this.isLoading = false;
     }, 1000);
   }

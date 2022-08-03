@@ -12,16 +12,16 @@ export interface PeriodicElement {
 }
 
 let ELEMENT_DATA: PeriodicElement[] = [
-  {position: '1', name: 'Ordinales', img: 'tekmanEyes.png'},
-  {position: '2', name: 'Ordinales y fracciones', img: 'tekmanEyes.png'},
-  {position: '3', name: 'Fracciones y decimales', img: 'tekmanEyes.png'},
-  {position: '4', name: 'Ordinales, Fracciones y Decimales', img: 'tekmanEyes.png'},
-  {position: '5', name: 'Ordinales, Fracciones, Decimales y Geometría',  img: 'tekmanEyes.png'},
-  {position: '6', name: 'Carbon',  img: 'tekmanEyes.png'},
-  {position: '7', name: 'Geometría y Fracciones',  img: 'tekmanEyes.png'},
-  {position: '8', name: 'Fracciones, Decimales y  Geometría', img: 'tekmanEyes.png'},
-  {position: '9', name: 'Ordinales, Fracciones, Decimales,Geometria, Números', img: 'tekmanEyes.png'},
-  {position: '10', name: 'Fracciones', img: 'tekmanEyes.png'},
+  { position: '1', name: 'Ordinales', img: 'tekmanEyes.png' },
+  { position: '2', name: 'Ordinales y fracciones', img: 'tekmanEyes.png' },
+  { position: '3', name: 'Fracciones y decimales', img: 'tekmanEyes.png' },
+  { position: '4', name: 'Ordinales, Fracciones y Decimales', img: 'tekmanEyes.png' },
+  { position: '5', name: 'Ordinales, Fracciones, Decimales y Geometría', img: 'tekmanEyes.png' },
+  { position: '6', name: 'Carbon', img: 'tekmanEyes.png' },
+  { position: '7', name: 'Geometría y Fracciones', img: 'tekmanEyes.png' },
+  { position: '8', name: 'Fracciones, Decimales y  Geometría', img: 'tekmanEyes.png' },
+  { position: '9', name: 'Ordinales, Fracciones, Decimales,Geometria, Números', img: 'tekmanEyes.png' },
+  { position: '10', name: 'Fracciones', img: 'tekmanEyes.png' },
 ];
 @Component({
   selector: 'app-detail-card',
@@ -45,7 +45,7 @@ export class DetailCardComponent implements OnInit {
     this.rutaActiva.paramMap.subscribe((params: ParamMap) => {
       this.idCard = params.get('id');
       this.cardService.getListCardInfo().subscribe(item => {
-        this.myCard = item.find((x:any) => (x.id === Number(this.idCard)));
+        this.myCard = item.find((x: any) => (x.id === Number(this.idCard)));
       });
     });
 
@@ -70,12 +70,14 @@ export class DetailCardComponent implements OnInit {
     this.dataSource[row] = row;
 
     let isEqual = false;
-    this.clickedRows.forEach( x => { if(x === row) {
-      isEqual = true;
-      this.clickedRows.delete(row);
-    }})
+    this.clickedRows.forEach(x => {
+      if (x === row) {
+        isEqual = true;
+        this.clickedRows.delete(row);
+      }
+    })
 
-    if(!isEqual){
+    if (!isEqual) {
       this.clickedRows.add(row);
     }
 

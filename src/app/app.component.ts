@@ -9,16 +9,15 @@ import { MatDialog } from '@angular/material/dialog';
 export class AppComponent {
   title = 'tekmanApp';
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog) { }
 
   status: boolean = false;
 
-  clickEvent(){
-      this.status = true;
+  clickEvent() {
+    this.status = true;
   }
 
-  clickEvent2()
-  {
+  clickEvent2() {
     this.status = false;
   }
 
