@@ -43,11 +43,8 @@ export class DetailCardComponent implements OnInit {
   ngOnInit(): void {
     this.rutaActiva.paramMap.subscribe((params: ParamMap) => {
       this.idCard = params.get('id');
-      console.log('obtengo mi idCard', this.idCard)
       this.cardService.getListCardInfo().subscribe(item => {
-        console.log('imprimo mi item', item);
         this.myCard = item.find((x:any) => (x.id === Number(this.idCard)));
-        console.log('imprimo myCard', this.myCard);
       });
     });
 
@@ -76,7 +73,6 @@ export class DetailCardComponent implements OnInit {
     const dialogRef = this.dialog.open(DialogInstructionsComponent);
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
     });
 
   }

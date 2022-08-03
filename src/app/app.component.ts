@@ -12,11 +12,11 @@ export class AppComponent {
   constructor(public dialog: MatDialog) {}
 
   status: boolean = false;
-  //Sidebar opne
+
   clickEvent(){
       this.status = true;
   }
-  //Sidebar close
+
   clickEvent2()
   {
     this.status = false;
