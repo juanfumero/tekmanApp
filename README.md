@@ -6,6 +6,8 @@ you need a version of node equal or greater than v14.15.0
 
 ## First comand
 
+install package node_moudele: `npm i`
+
 to run the api: `npm run api`
 
 ## Development app server
