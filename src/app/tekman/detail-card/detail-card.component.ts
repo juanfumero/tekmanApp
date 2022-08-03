@@ -11,7 +11,7 @@ export interface PeriodicElement {
   img: string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
+let ELEMENT_DATA: PeriodicElement[] = [
   {position: '1', name: 'Ordinales', img: 'tekmanEyes.png'},
   {position: '2', name: 'Ordinales y fracciones', img: 'tekmanEyes.png'},
   {position: '3', name: 'Fracciones y decimales', img: 'tekmanEyes.png'},
@@ -37,6 +37,7 @@ export class DetailCardComponent implements OnInit {
   myCard: any;
   isLoading: boolean = false;
   selectedRow: boolean = true;
+  myImg: any;
 
   constructor(private router: Router, public dialog: MatDialog, private rutaActiva: ActivatedRoute, private cardService: CardService) { }
 
@@ -56,10 +57,18 @@ export class DetailCardComponent implements OnInit {
     setTimeout(() => {
       this.router.navigate(['/']);
       this.isLoading = false;
-    }, 1500);
+    }, 1000);
   }
 
   selectedItem(row: any) {
+
+    if (row.img === 'tekmanPlay.png') {
+      row.img = 'tekmanEyes.png';
+    } else {
+      row.img = 'tekmanPlay.png';
+    }
+    this.dataSource[row] = row;
+
     let isEqual = false;
     this.clickedRows.forEach( x => { if(x === row) {
       isEqual = true;

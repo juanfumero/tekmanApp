@@ -54,7 +54,7 @@ export class HomeComponent implements OnInit {
     setTimeout(() => {
       this.router.navigate(['detailCard',event.id]);
       this.isLoading = false;
-    }, 1500);
+    }, 1000);
   }
 
 }
